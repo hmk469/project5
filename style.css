@@ -1,0 +1,285 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    ---background-color:blue;
+}
+body{
+    scroll-behavior: smooth;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+}
+
+/* nav  */
+
+nav{
+    padding: 10px 3%;
+    display: flex;
+    justify-content: space-between;
+    
+    color: white;
+
+}
+.aslide{
+    display: none;
+    transition: 0.5s;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0 -50%;
+}
+nav ul  li{
+    display: inline;
+
+}
+.hanburger{
+    display: none;
+    transition: 0.5s;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 0 5%;
+
+}
+nav .aslide{
+    display: none;
+    transition: 0.5s ease-in-out;
+}
+nav .logo span,.sign span:last-child{
+   background-color: var(---background-color);
+   padding: 5px 10px;
+   border-radius: 10px;
+   margin-left: 10px;
+}
+@media (max-width:900px){
+   .Menu{
+       display: none;
+   }
+   nav .aslide{
+       display: none;
+      position: absolute;
+      height: 100%;
+      right: 0;
+      transition: 0.5s ease-in-out;
+
+   }
+   nav .aslide ul{
+    background-color: blue;
+    height: 100%;
+    padding-right: 10%;
+    padding-top: 20%;
+    margin-top: -20%;
+    text-align: center;
+
+   }
+   nav .aslide ul li{
+    display: block;
+    line-height: 60px;
+
+   }
+   .close {
+       display: block;
+       transition: 0.5s ease-in-out;
+
+   }
+    .hanburger{
+        display: block;
+        transition: 0.5s ease-in-out;
+
+    }
+}
+@media (max-width:750px){
+    body,button{
+        font-size: 70%;
+    }
+ }
+@media (max-width:520px){
+    body,button{
+        font-size: 60%;
+    }
+ }
+ @media (max-width:450px){
+    body,button{
+        font-size: 50%;
+    }
+ }
+ @media (max-width:370px){
+    body,button{
+        font-size: 40%;
+    }
+ }
+ @media (max-width:300px){
+    body,button{
+        font-size: 30%;
+    }
+ }
+ #Home{
+     color: white;
+     margin-top: -6%;
+     padding: 5%;
+     top: 30%;
+     left: 20%;
+     background-image:linear-gradient( rgba(62, 63, 66, 0.1), rgba(19, 18, 19, 0.2)),url("https://wallpaperaccess.com/full/1700222.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+     
+ }
+ #Home .intro{
+     margin: 10%;
+     width: 60%;
+    animation: backInLeft;
+    animation-duration: 2s
+ }
+ #Home p{
+     margin: 3% 0;
+ }
+ #Home button{
+     background-color: var(---background-color);
+     color: white;
+     padding: 2% 3%;
+     border-radius: 5px;
+     border-style: none;
+     }
+ #Home i{
+    color: var(---background-color);
+    background-color: white;
+    padding: 2%;
+    margin-left: 2%;
+    border-radius: 50%;
+ }
+ #Home i:hover{
+     background-color: black;
+     transform: scale(1.1);
+ }
+ #Home button:hover{
+     background-color: black;
+     box-shadow: rgba(250, 246, 246, 0.35) 0px 5px 15px;
+     transform: scale(1.1);
+ }
+
+ /* Contact  */
+
+ #Contact{
+     width: 100%;
+     padding: 10% 3%;
+     display: flex;
+ }
+ #Contact .context{
+    width: 90%;
+ }
+ #Contact .context p{
+     text-align: justify;
+ }
+ #Contact .context button{
+     margin-top: 3%;
+     background-color: blue;
+     color: white;
+     padding: 2% 3%;
+     border-style: none;
+     border-radius: 10px;
+
+ }
+ #Contact .cards{
+     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    
+ }
+ 
+ #Contact .cards div{
+     width: 250px;
+     margin: 0 2%;
+     padding: 5% 3%;
+     margin: 3% ;
+     justify-items: center;
+    align-items: center;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ }
+ #Contact .cards i{
+    background-color: blue;
+    color: white;
+    padding: 3%;
+    margin-bottom: 3%;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+ }
+ #Contact .cards div p{
+     text-align: justify;
+     margin-bottom: 5%;
+     font-size: 0.8rem;
+ }
+ #Contact .cards div:nth-child(2),#Contact .cards div:nth-child(2) h4{
+     background-color: blue;
+     color: white;
+ }
+ #Contact .cards div:nth-child(2) i{
+     background: white;
+     color: blue;
+ }
+ #Contact .cards h4{
+    color: blue;
+
+ }
+ @media (max-width:1210px){  
+    #Contact .context{
+        width: 80%;
+     }
+     #Contact .cards div{
+        width: 220px;
+        margin: 3% 2%;
+        justify-items: center;
+       align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        line-height: 20px;
+    }  
+ }
+ @media (max-width:965px){  
+  #Contact{
+      flex-wrap: wrap;
+  }
+  #Contact .context{
+      width: 100%;
+  }
+  #Contact .context h1{
+      margin-bottom: 3%;
+  }
+  
+  #Contact .cards div{
+      width: 45%;
+  }
+}
+@media (max-width:750px){
+    #Contact .context button{
+        padding: 1% ;
+        border-radius: 5px;
+    }
+    #Contact .cards div p{
+        font-size: 0.7rem;
+    }
+}
+@media (max-width:510px){  
+    #Contact .cards div{
+        line-height: normal;
+    }
+    #Contact .cards p{
+        margin: 1px 0;
+    }
+    #Contact .cards div p{
+        font-size: 0.5rem;
+    }
+}
+@media (max-width:280px){
+    #Contact .cards div p{
+        font-size: 0.4rem;
+    }
+
+}
