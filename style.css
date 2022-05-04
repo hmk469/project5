@@ -173,17 +173,23 @@ nav .logo span,.sign span:last-child{
  }
  #Contact .context{
     width: 90%;
+    animation: fadeInLeft;
+    animation-duration: 1s;
+    
  }
  #Contact .context p{
      text-align: justify;
+     line-height: 30px;
+     margin-top: 20%;
  }
  #Contact .context button{
-     margin-top: 3%;
+     margin-top: 5%;
      background-color: blue;
      color: white;
      padding: 2% 3%;
      border-style: none;
      border-radius: 10px;
+     font-size: 100%;
 
  }
  #Contact .cards{
@@ -195,14 +201,30 @@ nav .logo span,.sign span:last-child{
  }
  
  #Contact .cards div{
-     width: 250px;
+     width: 320px;
      margin: 0 2%;
      padding: 5% 3%;
      margin: 3% ;
      justify-items: center;
     align-items: center;
      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     animation: fadeIn;
  }
+ #Contact .cards div:nth-child(1){
+   animation-duration: 6s;
+}
+ #Contact .cards div:nth-child(2){
+    animation-duration: 8s;
+
+}
+ #Contact .cards div:nth-child(3){
+    animation-duration: 10s;
+
+}
+#Contact .cards div:nth-child(4){
+    animation-duration: 12s;
+
+}
  #Contact .cards i{
     background-color: blue;
     color: white;
@@ -215,7 +237,6 @@ nav .logo span,.sign span:last-child{
  #Contact .cards div p{
      text-align: justify;
      margin-bottom: 5%;
-     font-size: 0.8rem;
  }
  #Contact .cards div:nth-child(2),#Contact .cards div:nth-child(2) h4{
      background-color: blue;
@@ -224,22 +245,28 @@ nav .logo span,.sign span:last-child{
  #Contact .cards div:nth-child(2) i{
      background: white;
      color: blue;
+
  }
  #Contact .cards h4{
     color: blue;
 
  }
- @media (max-width:1210px){  
+ @media (max-width:1280px){  
     #Contact .context{
-        width: 80%;
+        width: 60%;
      }
      #Contact .cards div{
-        width: 220px;
+        width: 280px;
         margin: 3% 2%;
-        justify-items: center;
-       align-items: center;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         line-height: 20px;
+    }  
+    #Contact .cards div p{
+        font-size: 70%;
+    }
+ }
+ @media (max-width:1024px){
+    #Contact .cards div{
+        width: 240px;
     }  
  }
  @media (max-width:965px){  
@@ -248,6 +275,13 @@ nav .logo span,.sign span:last-child{
   }
   #Contact .context{
       width: 100%;
+  }
+  #Contact .context p{
+      line-height: normal;
+      margin-top: 1%;
+  }
+  #Contact .context button{
+      margin-top: 2%;
   }
   #Contact .context h1{
       margin-bottom: 3%;
@@ -281,5 +315,101 @@ nav .logo span,.sign span:last-child{
     #Contact .cards div p{
         font-size: 0.4rem;
     }
+}
+    /* Browser */
 
+   #Browser{
+       padding: 3%;
+       text-align: center;
+   }
+   #Browser .title{
+       margin: 3% 0;
+   }
+   #Browser .title span{
+      margin-left: 1%;
+   }
+   #Browser .title span:nth-child(3){
+       border-bottom: 4px solid rgb(5, 5, 5); 
+   }
+   #Browser .cards{
+       width: 100%;
+       display: flex;
+        flex-wrap: wrap; 
+   }
+   #Browser .cards >div{
+       padding-bottom: 2%;
+       font-size: 70%;
+       width: 22%;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 3% 1%;
+    text-align: left;
+   }
+   #Browser .cards >div img{
+       object-fit: cover;
+       width: 100%;
+   }
+  
+   #Browser .cards >div h3{
+       color: blue;
+       margin: 1% 0;
+   }
+   #Browser .cards >div h4{
+       margin: 1% 0;
+   }
+   #Browser .cards >div p{
+       font-size: 90%;
+   }
+   #Browser .cards >div a{
+       text-decoration: none;
+      
+   }
+   #Browser .cards i{
+       color: blue;
+       margin: 0 2%;
+   }
+   #Browser .cards >div h3 span{
+       position: absolute;
+       right: 0;
+   }
+   #Browser .Area{
+       position: relative;
+       display: block;
+       box-shadow: none;
+       font-size: 90%;
+       line-height: 30px;
+   }
+   #Browser .Area span{
+    position: absolute;
+    
+   }
+   #Browser .Area button{
+       margin-left: 20%;
+       padding: 2% 3%;
+       text-transform: capitalize;
+       background-color: grey;
+       color: white;
+       border-radius: 10px;
+   }
+@media(max-width:1024px){
+    #Browser .cards >div{
+        font-size: 60%;
+}
+#Browser .Area{
+    line-height: 10px;
+}
+#Browser .Area button{
+    padding: 1% 2%;
+}
+}
+@media(max-width:900px){
+    #Browser .cards >div{
+        font-size: 50%;
+}
+#Browser .cards{
+    margin: 0 5%;
+}
+#Browser .cards >div{
+    width: 45%;
+}
 }
